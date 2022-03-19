@@ -36,6 +36,7 @@ public class TicTacToe {
                 continue;
             }
         }
+        System.out.println("no free space available");
     }
     //Printing the TicTacToe Board.....
     static void board(){
