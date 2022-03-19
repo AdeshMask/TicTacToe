@@ -52,10 +52,9 @@ public class TicTacToe {
         // For winner -to display Congratulations! message.
         else {
             System.out.println(
-                    "Congratulations! " + winner
-                            + "'s have won! Thanks for playing.");
-
+                    "Congratulations! " + winner + "'s have won! Thanks for playing.");
         }
+
     }
 
 //=========================================================================================
