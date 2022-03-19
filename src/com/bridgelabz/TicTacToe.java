@@ -8,15 +8,16 @@ public class TicTacToe {
     static String turn;
     static String winner = null;
 
+
     static void takeInput(){
         Scanner in = new Scanner(System.in);
+        System.out.println("First turn is User...enter slot no to place X");
         while (winner == null) {
-            int numInput;
-            System.out.println("First turn is User...enter slot no to place X");
-            numInput = in.nextInt();
+            System.out.println("Enter Slot number");
+            int numInput = in.nextInt();;
+
             if (!(numInput > 0 && numInput <= 9)) {
-                System.out.println(
-                        "Invalid input; re-enter slot number:");
+                System.out.println("Invalid input; re-enter slot number:");
                 continue;
             }
 
@@ -47,7 +48,7 @@ public class TicTacToe {
         System.out.println("|---|---|---|");
     }
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         Scanner in = new Scanner(System.in);
         board = new String[9];
         turn = "X";
@@ -55,6 +56,7 @@ public class TicTacToe {
         for (int a = 0; a < 9; a++) {
             board[a] =String.valueOf(a+1);
         }
+       // System.out.println("First turn is User...enter slot no to place X");
         board();
         takeInput();
     }
