@@ -28,9 +28,7 @@ public class TicTacToe {
                 } else {
                     turn = "X";
                 }
-
                 board();
-                //winner = checkWinner();
             }
             else {
                 System.out.println("Slot already taken; re-enter slot number:");
