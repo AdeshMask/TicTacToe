@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -11,7 +12,16 @@ public class TicTacToe {
 
     static void takeInput(){
         Scanner in = new Scanner(System.in);
-        System.out.println("First turn is User...enter slot no to place X");
+        int toss = (int) Math.floor(Math.random() * 2);
+        System.out.print("After Making toss ");
+        if (toss < .5){
+            System.out.println("User Play first");
+            turn = "X";
+        }
+        else {
+            System.out.println("Computer Play first");
+            turn = "O";
+        }
         while (winner == null) {
             System.out.println("Enter Slot number");
             int numInput = in.nextInt();;
@@ -33,10 +43,8 @@ public class TicTacToe {
             }
             else {
                 System.out.println("Slot already taken; re-enter slot number:");
-                continue;
             }
         }
-        System.out.println("no free space available");
     }
     //Printing the TicTacToe Board.....
     static void board(){
@@ -52,12 +60,10 @@ public class TicTacToe {
         // write your code here
         Scanner in = new Scanner(System.in);
         board = new String[9];
-        turn = "X";
         System.out.println("TicTacToe");
         for (int a = 0; a < 9; a++) {
             board[a] =String.valueOf(a+1);
         }
-       // System.out.println("First turn is User...enter slot no to place X");
         board();
         takeInput();
     }
